@@ -1,0 +1,13 @@
+--
+-- XXDOAR_SUPP_BNK_DTLS_PKG  (Package) 
+--
+--  Dependencies: 
+--   STANDARD (Package)
+--
+/* Formatted on 4/26/2023 4:12:25 PM (QP5 v5.362) */
+CREATE OR REPLACE PACKAGE APPS."XXDOAR_SUPP_BNK_DTLS_PKG"
+    AUTHID CURRENT_USER
+AS
+    PROCEDURE main (errbuf OUT VARCHAR2, retcode OUT VARCHAR2);
+END XXDOAR_SUPP_BNK_DTLS_PKG;
+/

@@ -1,0 +1,18 @@
+--
+-- XXDOINT_AP_INVOICE_UTILS  (Package) 
+--
+--  Dependencies: 
+--   STANDARD (Package)
+--
+/* Formatted on 4/26/2023 4:13:31 PM (QP5 v5.362) */
+CREATE OR REPLACE PACKAGE APPS."XXDOINT_AP_INVOICE_UTILS"
+    AUTHID DEFINER
+AS
+    FUNCTION get_invoice_header_id
+        RETURN NUMBER;
+END;
+/
+
+
+GRANT EXECUTE ON APPS.XXDOINT_AP_INVOICE_UTILS TO SOA_INT
+/
