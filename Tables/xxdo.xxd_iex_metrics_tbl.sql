@@ -1,0 +1,100 @@
+--
+-- XXD_IEX_METRICS_TBL  (Table) 
+--
+CREATE TABLE XXDO.XXD_IEX_METRICS_TBL
+(
+  CUST_ACCOUNT_ID     NUMBER,
+  ORG_ID              NUMBER,
+  ADL_Q1              NUMBER,
+  ADL_Q2              NUMBER,
+  ADL_Q3              NUMBER,
+  ADL_Q4              NUMBER,
+  ADL_Q5              NUMBER,
+  ADL_Q6              NUMBER,
+  ADL_Q7              NUMBER,
+  ADL_Q8              NUMBER,
+  CURR_ADL            NUMBER,
+  ADL_VARIANCE        NUMBER,
+  AGING_BUCKET_SCORE  NUMBER,
+  AGING_BUCKET        VARCHAR2(20 BYTE),
+  BOOKED_ORDER_SCORE  NUMBER,
+  LAST_PAYMENT_SCORE  NUMBER,
+  ADL_SCORE           NUMBER,
+  SCORE               NUMBER,
+  MAPPED_SCORE        NUMBER,
+  ATTRIBUTE_CATEGORY  VARCHAR2(100 BYTE),
+  ATTRIBUTE1          VARCHAR2(30 BYTE),
+  ATTRIBUTE2          VARCHAR2(30 BYTE),
+  ATTRIBUTE3          VARCHAR2(30 BYTE),
+  ATTRIBUTE4          VARCHAR2(30 BYTE),
+  ATTRIBUTE5          VARCHAR2(30 BYTE),
+  ATTRIBUTE6          VARCHAR2(30 BYTE),
+  ATTRIBUTE7          VARCHAR2(30 BYTE),
+  ATTRIBUTE8          VARCHAR2(30 BYTE),
+  ATTRIBUTE9          VARCHAR2(30 BYTE),
+  ATTRIBUTE10         VARCHAR2(30 BYTE),
+  ATTRIBUTE11         VARCHAR2(30 BYTE),
+  ATTRIBUTE12         VARCHAR2(30 BYTE),
+  ATTRIBUTE13         VARCHAR2(30 BYTE),
+  ATTRIBUTE14         VARCHAR2(30 BYTE),
+  ATTRIBUTE15         VARCHAR2(30 BYTE),
+  ATTRIBUTE16         VARCHAR2(30 BYTE),
+  ATTRIBUTE17         VARCHAR2(30 BYTE),
+  ATTRIBUTE18         VARCHAR2(30 BYTE),
+  ATTRIBUTE19         VARCHAR2(30 BYTE),
+  ATTRIBUTE20         VARCHAR2(30 BYTE),
+  CREATED_BY          NUMBER,
+  CREATION_DATE       DATE,
+  LAST_UPDATED_BY     NUMBER,
+  LAST_UPDATE_DATE    DATE
+)
+TABLESPACE CUSTOM_TX_TS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCOMPRESS 
+NOCACHE
+/
+
+
+ALTER TABLE XXDO.XXD_IEX_METRICS_TBL ADD (
+  PRIMARY KEY
+  (CUST_ACCOUNT_ID, ORG_ID, ATTRIBUTE1)
+  USING INDEX
+    TABLESPACE CUSTOM_TX_TS
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                NEXT             1M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+                BUFFER_POOL      DEFAULT
+               )
+  ENABLE VALIDATE)
+/
+
+
+--  There is no statement for index XXDO.SYS_C00284605.
+--  The object is created when the parent object is created.
+
+--
+-- XXD_IEX_METRICS_TBL  (Synonym) 
+--
+--  Dependencies: 
+--   XXD_IEX_METRICS_TBL (Table)
+--
+CREATE OR REPLACE SYNONYM APPS.XXD_IEX_METRICS_TBL FOR XXDO.XXD_IEX_METRICS_TBL
+/
