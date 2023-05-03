@@ -1,0 +1,51 @@
+--
+-- XXDO_ATR_DIRTY  (Table) 
+--
+CREATE TABLE XXDO.XXDO_ATR_DIRTY
+(
+  ORGANIZATION_ID    NUMBER,
+  INVENTORY_ITEM_ID  NUMBER
+)
+TABLESPACE CUSTOM_TX_TS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOLOGGING 
+NOCOMPRESS 
+NOCACHE
+PARALLEL ( DEGREE 3 INSTANCES 2 )
+/
+
+
+--
+-- XXDO_ATR_DIRTY_N1  (Index) 
+--
+--  Dependencies: 
+--   XXDO_ATR_DIRTY (Table)
+--
+CREATE INDEX XXDO.XXDO_ATR_DIRTY_N1 ON XXDO.XXDO_ATR_DIRTY
+(ORGANIZATION_ID, INVENTORY_ITEM_ID)
+NOLOGGING
+TABLESPACE APPS_TS_TX_IDX
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          128K
+            NEXT             128K
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+PARALLEL ( DEGREE 3 INSTANCES 2 )
+/
