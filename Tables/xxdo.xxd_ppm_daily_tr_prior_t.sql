@@ -1,0 +1,33 @@
+--
+-- XXD_PPM_DAILY_TR_PRIOR_T  (Table) 
+--
+CREATE TABLE XXDO.XXD_PPM_DAILY_TR_PRIOR_T
+(
+  ACTIVITY_CODE     VARCHAR2(10 BYTE)           NOT NULL,
+  RESOURCE_CODE     VARCHAR2(10 BYTE)           NOT NULL,
+  DAY_DATE          DATE                        NOT NULL,
+  REQUEST_NUMBER    NUMBER                      NOT NULL,
+  DAILY_EFFORT      NUMBER,
+  DAILY_EFFORT_REC  NUMBER,
+  INTEGRATE_STATUS  VARCHAR2(1 BYTE),
+  COST_RATE_ID      NUMBER,
+  BILL_RATE_ID      NUMBER,
+  CREATED_ON        DATE
+)
+TABLESPACE CUSTOM_TX_TS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCOMPRESS 
+NOCACHE
+/

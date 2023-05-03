@@ -1,0 +1,24 @@
+--
+-- XXD_CAL_NEG_ATP_GT  (Table) 
+--
+CREATE GLOBAL TEMPORARY TABLE XXDO.XXD_CAL_NEG_ATP_GT
+(
+  SESSION_ID          NUMBER,
+  SUPPLY_DEMAND_DATE  DATE,
+  NET_QTY             NUMBER,
+  POH                 NUMBER,
+  ATP                 NUMBER
+)
+ON COMMIT DELETE ROWS
+NOCACHE
+/
+
+
+--
+-- XXD_CAL_NEG_ATP_GT  (Synonym) 
+--
+--  Dependencies: 
+--   XXD_CAL_NEG_ATP_GT (Table)
+--
+CREATE OR REPLACE SYNONYM APPS.XXD_CAL_NEG_ATP_GT FOR XXDO.XXD_CAL_NEG_ATP_GT
+/
