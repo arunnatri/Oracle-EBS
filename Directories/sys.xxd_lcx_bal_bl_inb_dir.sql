@@ -1,0 +1,8 @@
+DROP DIRECTORY XXD_LCX_BAL_BL_INB_DIR;
+
+--
+-- XXD_LCX_BAL_BL_INB_DIR  (Directory) 
+--
+CREATE OR REPLACE DIRECTORY 
+XXD_LCX_BAL_BL_INB_DIR AS 
+'/f01/EBSPROD/Inbound/Integrations/Reports/Lucernex';

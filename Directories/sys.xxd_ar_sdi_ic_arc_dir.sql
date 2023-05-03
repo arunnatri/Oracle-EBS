@@ -1,0 +1,8 @@
+DROP DIRECTORY XXD_AR_SDI_IC_ARC_DIR;
+
+--
+-- XXD_AR_SDI_IC_ARC_DIR  (Directory) 
+--
+CREATE OR REPLACE DIRECTORY 
+XXD_AR_SDI_IC_ARC_DIR AS 
+'/f01/EBSPROD/Outbound/Integrations/Pagero/AR/IC/Archive';

@@ -1,0 +1,8 @@
+DROP DIRECTORY XXD_OE_LOYALTY_DIR;
+
+--
+-- XXD_OE_LOYALTY_DIR  (Directory) 
+--
+CREATE OR REPLACE DIRECTORY 
+XXD_OE_LOYALTY_DIR AS 
+'/f01/EBSPROD/Inbound/Integrations/Reports/Loyalty';

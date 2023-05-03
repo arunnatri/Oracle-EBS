@@ -1,0 +1,8 @@
+DROP DIRECTORY XXD_FCTY_ACC_BAL_BL_ARC_DIR;
+
+--
+-- XXD_FCTY_ACC_BAL_BL_ARC_DIR  (Directory) 
+--
+CREATE OR REPLACE DIRECTORY 
+XXD_FCTY_ACC_BAL_BL_ARC_DIR AS 
+'/f01/EBSPROD/Inbound/Integrations/Reports/FactoryAcc/Archive';
